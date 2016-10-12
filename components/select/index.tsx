@@ -1,6 +1,6 @@
 import React from 'react';
 import { PropTypes } from 'react';
-import RcSelect, { Option, OptGroup } from 'rc-select';
+import RcSelect, { Option, OptGroup } from 'ziaochina-rc-select';
 import classNames from 'classnames';
 import assign from 'object-assign';
 
