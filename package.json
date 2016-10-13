@@ -1,6 +1,6 @@
 {
   "name": "ziaochina-antd",
-  "version": "0.0.21",
+  "version": "0.0.22",
   "title": "Ant Design",
   "description": "An enterprise-class UI design language and React-based implementation",
   "homepage": "http://ant.design/",
@@ -25,7 +25,7 @@
   "bugs": {
     "url": "https://github.com/ant-design/ant-design/issues"
   },
-  "main": "dist/antd",
+  "main": "dist/ziaochina-antd",
   "files": [
     "dist",
     "lib"
