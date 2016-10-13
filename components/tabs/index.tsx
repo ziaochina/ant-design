@@ -42,7 +42,7 @@ export default class Tabs extends React.Component<TabsProps, any> {
     onChange() { },
     onEdit() { },
     hideAdd: false,
-    animated: true,
+    animated: false,
   };
 
   createNewTab = (targetKey) => {
