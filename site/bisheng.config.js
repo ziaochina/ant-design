@@ -84,7 +84,7 @@ module.exports = {
       require.resolve('babel-plugin-import'),
       {
         style: true,
-        libraryName: 'ziaochina-antd',
+        libraryName: 'antd',
         libraryDirectory: 'components',
       },
     ]);
