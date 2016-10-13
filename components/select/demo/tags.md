@@ -31,6 +31,7 @@ ReactDOM.render(
     style={{ width: '100%' }}
     searchPlaceholder="标签模式"
     onChange={handleChange}
+    dropdownFooter={<button>dd</button>}
   >
     {children}
   </Select>
