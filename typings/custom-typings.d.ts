@@ -98,6 +98,14 @@ declare module 'rc-select' {
   export default exports;
 }
 
+declare module 'ziaochina-rc-select' {
+  export const Option: any;
+  export const OptGroup: any;
+  const exports: any;
+  export default exports;
+}
+
+
 declare module 'react-slick' {
   export default function(): any;
 }
