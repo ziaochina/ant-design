@@ -123,7 +123,7 @@ export default class Modal extends React.Component<ModalProps, any> {
 
 
 
-    const defaultFooter = [
+    let defaultFooter = [
       <Button
         key="cancel"
         type="ghost"
