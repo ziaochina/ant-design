@@ -26,7 +26,7 @@ export interface ModalProps {
   width?: string | number;
   /** 底部内容*/
   footer?: React.ReactNode;
-  footerLeft?:React.ReactNode;
+  footerLeft?: React.ReactNode;
   /** 确认按钮文字*/
   okText?: string;
   /** 取消按钮文字*/
