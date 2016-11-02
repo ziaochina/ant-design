@@ -76,6 +76,7 @@ export default class Modal extends React.Component<ModalProps, any> {
     visible: PropTypes.bool,
     align: PropTypes.object,
     footer: PropTypes.node,
+    footerLeft: PropTypes.node,
     title: PropTypes.node,
     closable: PropTypes.bool,
   };
