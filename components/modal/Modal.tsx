@@ -143,6 +143,7 @@ export default class Modal extends React.Component<ModalProps, any> {
       </Button>,
     ];
 
+
     if(footerLeft){
       defaultFooter.splice(0,0, footerLeft)  
     }
