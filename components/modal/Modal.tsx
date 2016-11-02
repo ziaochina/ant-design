@@ -112,12 +112,14 @@ export default class Modal extends React.Component<ModalProps, any> {
   }
 
   render() {
-    let { okText, cancelText, confirmLoading, footer, visible } = this.props;
+    let { okText, cancelText, confirmLoading, footer, footerLeft, visible } = this.props;
 
     if (this.context.antLocale && this.context.antLocale.Modal) {
       okText = okText || this.context.antLocale.Modal.okText;
       cancelText = cancelText || this.context.antLocale.Modal.cancelText;
     }
+
+
 
     const defaultFooter = [
       <Button
@@ -138,6 +140,10 @@ export default class Modal extends React.Component<ModalProps, any> {
         {okText || '确定'}
       </Button>,
     ];
+
+    if(footerLeft){
+      defaultFooter.splice(0,0, footerLeft)  
+    }
 
     return (
       <Dialog
