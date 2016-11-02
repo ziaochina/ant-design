@@ -76,7 +76,7 @@ export default class Modal extends React.Component<ModalProps, any> {
     visible: PropTypes.bool,
     align: PropTypes.object,
     footer: PropTypes.node,
-    footerLeft: PropTypes.any,
+    footerLeft: PropTypes.node,
     title: PropTypes.node,
     closable: PropTypes.bool,
   };
@@ -114,16 +114,37 @@ export default class Modal extends React.Component<ModalProps, any> {
   }
 
   render() {
-    let { okText, cancelText, confirmLoading, footer, footerLeft, visible } = this.props;
+    let { okText, cancelText, confirmLoading, footer, footerLeft,  visible } = this.props;
 
     if (this.context.antLocale && this.context.antLocale.Modal) {
       okText = okText || this.context.antLocale.Modal.okText;
       cancelText = cancelText || this.context.antLocale.Modal.cancelText;
     }
+     let defaultFooter
 
-
-
-    let defaultFooter = [
+    if(footerLeft){
+     defaultFooter = [
+      <Button
+        key="cancel"
+        type="ghost"
+        size="large"
+        onClick={this.handleCancel}
+      >
+        {cancelText || '取消'}
+      </Button>,{footerLeft},
+      <Button
+        key="confirm"
+        type="primary"
+        size="large"
+        loading={confirmLoading}
+        onClick={this.handleOk}
+      >
+        {okText || '确定'}
+      </Button>,
+    ];
+  }
+  else{
+     defaultFooter = [
       <Button
         key="cancel"
         type="ghost"
@@ -142,11 +163,7 @@ export default class Modal extends React.Component<ModalProps, any> {
         {okText || '确定'}
       </Button>,
     ];
-
-
-    if(footerLeft){
-      defaultFooter.splice(0,0, footerLeft)  
-    }
+  }
 
     return (
       <Dialog
